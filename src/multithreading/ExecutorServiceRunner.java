@@ -12,6 +12,12 @@ public class ExecutorServiceRunner {
         executorService.execute(new Task1());
         executorService.execute(new Thread(new Task2()));
 
+        System.out.println("\ntask three starts from main");
+        for(int i=301;i<=399;i++){
+            System.out.print(" "+i);
+        }
+        System.out.println("\ntask three ends from main");
+
         //executor service.shutdown is mandatory /if not the service will keep on running and won't end.
         executorService.shutdown();
     }
